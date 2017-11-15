@@ -62,14 +62,7 @@ public interface OnUploadListener {//主线程回调
     void onThreadFinish(int position);
     void onThreadInterrupted(int position);
 }
-1
-2
-3
-4
-5
-6
-7
-8
+
 任务线程的回调接口：
 
 public interface OnThreadResultListener {
@@ -77,22 +70,14 @@ public interface OnThreadResultListener {
     void onFinish();//线程完成时回调
     void onInterrupted();//线程被中断回调
 }
-1
-2
-3
-4
-5
+
 监听线程回调接口：
 
 public interface OnAllThreadResultListener {
     void onSuccess();//所有线程执行完毕
     void onFailed();//所有线程执行出现问题
 }
-1
-2
-3
-4
-5
+
 定义Runnable对象UploadFile的任务线程：
 
 public class UploadFile implements Runnable {
@@ -125,37 +110,7 @@ public class UploadFile implements Runnable {
         }
     }
 }
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
+
 定义监听线程UploadListener来判断所有线程的执行与否
 
 public class UploadListener implements Runnable {
@@ -177,23 +132,5 @@ public class UploadListener implements Runnable {
         }
     }
 }
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
+
 最后封装一个UploadUtil对象来操作，参考了AsyncTask实现，AsyncTask的本质就是线程池和handler的封装，跟我们多线程上传下载很相似。在子线程中做耗时操作，完成后将结果回调到UI线程上。
