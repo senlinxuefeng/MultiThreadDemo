@@ -1,4 +1,4 @@
-package com.yumingchuan.syncthread.synch;
+package com.yumingchuan.syncthread.MultiThreadUploadFile;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
@@ -30,6 +30,7 @@ public class UploadFile implements Runnable {
                 percent += 1;
                 Thread.sleep(mRandom.nextInt(60) + 30);//模拟延迟
             }
+            //完成一个线程工作的数目减去1
             this.downLatch.countDown();
             listener.onFinish();//顺利完成
         } catch (InterruptedException e) {

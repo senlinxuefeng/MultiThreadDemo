@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.yumingchuan.syncthread.synch.OnUploadListener;
-import com.yumingchuan.syncthread.synch.UploadUtil;
+import com.yumingchuan.syncthread.MultiThreadUploadFile.OnUploadListener;
+import com.yumingchuan.syncthread.MultiThreadUploadFile.UploadUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;

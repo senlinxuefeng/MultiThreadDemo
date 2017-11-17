@@ -1,4 +1,4 @@
-package com.yumingchuan.syncthread.synch;
+package com.yumingchuan.syncthread.MultiThreadUploadFile;
 
 /**
  * Created by yumingchuan on 2017/11/15.
